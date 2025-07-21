@@ -1,0 +1,13 @@
+# wrangler.toml
+
+name = "my-odds-proxy-worker-ts" # Name of Cloudflare Worker
+main = "dist/index.js"           # Path to the compiled Worker script
+compatibility_date = "2024-07-20" # Use a recent compatibility date for V8 runtime features
+
+[vars]
+# The scrpaing base URL of the primary odds API endpoint.
+ODDS_PARENT_URL = "https://www.realty88.com/_view/MOddsGen2.ashx?ot=t&update=true&r=1392804364&ov=0&mt=0&LID="
+
+# The URL of the Google Apps Script proxy.
+PROXY_URL = "YOUR-GOOGLE-APPS-SCRIPT-PROXY-EXEC-URL"
+
